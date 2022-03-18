@@ -1,0 +1,63 @@
+@import 'variables';
+
+.infoCharacter{
+  border: 2px solid $blackColor;
+  padding: 20px;
+  height: auto;
+  h2{
+    margin: 20px 0;
+    text-decoration: underline;
+    font: {
+      size: $fontSize * 2;
+      weight: 700;
+    }
+  }
+  ul li{
+    font-size: $fontSize * 1.2;
+    span{
+      font-weight: 700;
+    }
+  }
+
+  .muerto{
+    color: tomato
+  }
+  .vivo{
+    color: green
+  }
+  .desconocido{
+    color: gold
+  }
+
+  nav .submenu{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    li{
+      cursor: pointer;
+      width: 100%;
+      background-color: $blackColor;
+      color: $whiteColor;
+      border: 3px solid $primaryColor;
+      padding: 10px;
+      margin: 10px;
+      transition: .5s;
+
+      &:hover{
+        background-color: $primaryColor;
+        color: $blackColor;
+      }
+
+    }
+    .active{
+      background-color: $primaryColor !important;
+      color: $blackColor !important;
+    }
+
+  }
+
+}
+
+
+
+

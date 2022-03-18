@@ -1,0 +1,8 @@
+<div class="card">
+  <div *ngIf="this.tipo === 'episode'">
+    <h3>{{this.episode?.name}}</h3>
+  </div>
+  <div *ngIf="this.tipo === 'location'">
+    <h3>{{this.location?.name}}</h3>
+  </div>
+</div>

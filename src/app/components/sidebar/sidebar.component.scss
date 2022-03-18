@@ -1,0 +1,47 @@
+@import 'variables';
+
+.logo{
+  border-bottom: 2px solid $whiteColor;
+  margin-bottom: $marginGrid * 2;
+}
+
+nav{
+  .characters{
+    list-style: none;
+    padding: 0;
+    li{
+        cursor: pointer;
+        font-size: 85%;
+        color: $whiteColor;
+        font-weight: 700;
+        padding: 5px;
+        transition: .5s;
+        &:hover{
+          background-color: $primaryColor;
+          color: $blackColor
+      }
+    }
+    .active{
+       background-color: $primaryColor;
+      color: $blackColor
+    }
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    div{
+      width: 100%;
+      margin: 0 2%;
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+      padding: 10px;
+      cursor: pointer;
+      transition: .5s;
+      &:hover{
+        border: 1px solid $blackColor;
+        color: $blackColor;
+        background-color: $primaryColor;
+      }
+    }
+  }
+}

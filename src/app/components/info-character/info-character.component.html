@@ -1,0 +1,29 @@
+<section class="infoCharacter">
+  <h2>{{ character?.name}}</h2>
+  <div class="row">
+    <figure class="col-12 col-t-3">
+      <img [src]="character?.image" [alt]="character?.name">
+    </figure>
+    <div class="col-12 col-t-9">
+      <ul>
+        <li>Especie: <span>{{character?.species}}</span> </li>
+        <li>Genero: <span>{{ character?.gender }}</span> </li>
+        <li>Estado :
+          <span
+            [ngClass]="{'muerto': character?.status === 'Dead', 'vivo': character?.status === 'Alive', 'desconocido': character?.status === 'unknown'}">{{
+            character?.status}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <div>
+    <nav>
+      <ul class="submenu">
+        <li routerLinkActive="active" [routerLink]="['/character', character?.id, 'episodes']">Episodios</li>
+        <li routerLinkActive="active" [routerLink]="['/character', character?.id, 'locations']">Localizaciones</li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+</section>
